@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { IoSearch } from "react-icons/io5";
-import { TbMenu2, TbX } from "react-icons/tb"; // Import the close icon
-// Remember to import Link from react-router-dom for SPA navigation
-// import { Link } from 'react-router-dom';
+import { TbMenu2, TbX } from "react-icons/tb"; 
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -26,10 +26,10 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className='hidden md:flex items-center space-x-8'>
-          <li><a href='/' className='font-semibold text-white hover:text-gray-300'>Home</a></li>
-          <li><a href='/favorites' className='font-semibold text-white hover:text-gray-300'>Favorites</a></li>
-          <li><a href='/recipes' className='font-semibold text-white hover:text-gray-300'>Recipes</a></li>
-          <li><a href='/about' className='font-semibold text-white hover:text-gray-300'>About Us</a></li>
+          <li><Link to='/' className='font-semibold text-white hover:text-gray-300'>Home</Link></li>
+          <li><Link to='/favorites' className='font-semibold text-white hover:text-gray-300'>Favorites</Link></li>
+          <li><Link to='/recipes' className='font-semibold text-white hover:text-gray-300'>Recipes</Link></li>
+          <li><Link to='/about' className='font-semibold text-white hover:text-gray-300'>About Us</Link></li>
         </ul>
 
         {/* Hamburger Button */}
@@ -42,10 +42,10 @@ const Navbar = () => {
                        flex flex-col items-center gap-y-6 bg-blue-400/80 backdrop-blur-md rounded-xl p-6
                        transition-all duration-300 ease-in-out
                        ${showMenu ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-          <li><a href='/' className='font-semibold text-white hover:text-gray-300'>Home</a></li>
-          <li><a href='/favorites' className='font-semibold text-white hover:text-gray-300'>Favorites</a></li>
-          <li><a href='/recipes' className='font-semibold text-white hover:text-gray-300'>Recipes</a></li>
-          <li><a href='/about' className='font-semibold text-white hover:text-gray-300'>About Us</a></li>
+          <li><Link to='/' className='font-semibold text-white hover:text-gray-300'>Home</Link></li>
+          <li><Link to='/favorites' className='font-semibold text-white hover:text-gray-300'>Favorites</Link></li>
+          <li><Link to='/recipes' className='font-semibold text-white hover:text-gray-300'>Recipes</Link></li>
+          <li><Link to='/about' className='font-semibold text-white hover:text-gray-300'>About Us</Link></li>
           
           {/* Search Bar (Mobile) */}
           <li className='w-full items-center bg-white p-1 rounded-full flex'>
