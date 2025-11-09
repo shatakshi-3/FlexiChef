@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from './Pages/Home/Home'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import RecipeListPage from './pages/RecipeListPage'
+import RecipeListPage from './Pages/RecipeListPage.jsx'
 
 const Favorites = () => <div className='pt-20 text-center text-4xl'>Favorites Page</div>
 const Recipes = () => <div className='pt-20 text-center text-4xl'>Recipes Page</div>
